@@ -1,5 +1,7 @@
 <?php
 
+// UTILIZZATO PER L'UTENTE, NOI LO COLLEGHIAMO ALLA VIEW
+
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
