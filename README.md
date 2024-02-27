@@ -19,7 +19,7 @@ Laravel Migration Seeder
 
 Milestone 1
 
-Creiamo una tabella trains e relativa Migration
+Creiamo una tabella trains e relativa Migration (php artisan make:migration create_trains_table)
 Ogni treno dovrà avere:
 Azienda
 Stazione di partenza
