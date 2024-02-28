@@ -15,7 +15,32 @@
 
 6. Aprire un altro terminale ed eseguire il comando php artisan serve
 
-Laravel Migration Seeder
+LARAVEL MIGRATION SEEDER ESERCIZIO
+
+STEP BY STEP
+
+- creare nuovo database in phpmyadmin e lo scrivo nome nel file env;
+
+- php artisan make:model Train;
+
+- php artisan make:migration create_trains_table;
+
+- riempire la tabella con nomi di colonne dentro la funzione up()
+
+- php artisan migrate;
+
+- se modifico la tabella, cambio nome di colonne allora faccio: php artisan migrate:rollback; 
+
+- poi di nuovo: php artisan migrate;
+
+- creo un seeder per riempire le mie colonne di dati, facendo il comando: php artisan make:seeder TrainSeeder (NomeModelSeeder);
+
+- dopo aver riempito le colonne dei nostridatti allora facciamo il comando: php artisan db:seed --class=TraisSeeder; (questo esegue i seeder)
+
+
+// SPIEGAZIONE:batch(ordine di come vengono eseguite le migration).
+php artisanmigrate:rollback(esegue il codice della funzione down dell ultimo batch di migration ed elimina i record relativi nella tabella migrations) //
+
 
 Milestone 1
 

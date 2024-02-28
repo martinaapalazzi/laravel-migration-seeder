@@ -26,17 +26,17 @@ return new class extends Migration
             // Stazione di arrivo -> varchar(64) NOT NULL 
             $table->string('station_arrivals', 64);
 
-            // Orario di partenza -> time NOT NULL UNSIGNED
+            // Orario di partenza -> time NOT NULL
             $table->dateTime('time_departures');
 
-            // Orario di arrivo -> time NOT NULL UNSIGNED
+            // Orario di arrivo -> time NOT NULL 
             $table->dateTime('time_arrivals');
 
-            // Codice treno -> string NOT NULL UNSIGNED
-            $table->string('train_num', 100);
+            // Codice treno -> string NOT NULL UNIQUE
+            $table->string('train_num', 100)->unique();
 
             // Numero Carrozze -> tinyint NULL UNSIGNED
-            $table->tinyInteger('num_train_carriagies');
+            $table->tinyInteger('num_train_carriagies')->nullable()->unsigned();
 
             // In orario -> boolean NOT NULL 
             $table->boolean('on_time')->default(true);

@@ -16,7 +16,7 @@ class TrainSeeder extends Seeder
      */
     public function run(): void // run (Faker $faker)
     {
-        
+        Train::truncate();
         // Riempi la tabella
         for ($i = 0; $i < 10; $i++) {
             // Istanzio il model
@@ -33,13 +33,13 @@ class TrainSeeder extends Seeder
             // $train->on_time = ;
             // $train->cancelled = ;
 
-            $train->company = fake()->words(rand(1, 5), true);
-            $train->station_departures = fake()->name();
-            $train->station_arrivals = fake()->name();
+            $train->company = fake()->company();
+            $train->station_departures = fake()->city();
+            $train->station_arrivals = fake()->city();
             $train->time_departures = fake()->dateTime();
             $train->time_arrivals = fake()->dateTime();
-            $train->train_num = fake()->name();
-            $train->num_train_carriagies = fake()->numerify();
+            $train->train_num = fake()->regexify('[A-Z],{4},[0-9],{3}');
+            $train->num_train_carriagies = rand(2,10);
             $train->on_time = fake()->boolean();
             $train->cancelled = fake()->boolean();
 
