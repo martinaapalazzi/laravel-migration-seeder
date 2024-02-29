@@ -15,9 +15,9 @@
 
 6. Aprire un altro terminale ed eseguire il comando php artisan serve
 
-LARAVEL MIGRATION SEEDER ESERCIZIO
+# LARAVEL MIGRATION SEEDER ESERCIZIO
 
-STEP BY STEP
+# STEP BY STEP
 
 - creare nuovo database in phpmyadmin e lo scrivo nome nel file env;
 
@@ -35,7 +35,7 @@ STEP BY STEP
 
 - creo un seeder per riempire le mie colonne di dati, facendo il comando: php artisan make:seeder TrainSeeder (NomeModelSeeder);
 
-- dopo aver riempito le colonne dei nostridatti allora facciamo il comando: php artisan db:seed --class=TrainSeeder; (questo esegue i seeder)
+- dopo aver riempito le colonne dei nostri dati allora facciamo il comando: php artisan db:seed --class=TrainSeeder; (questo esegue i seeder)
 
 
 // SPIEGAZIONE:batch(ordine di come vengono eseguite le migration).
